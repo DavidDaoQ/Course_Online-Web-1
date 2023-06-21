@@ -192,6 +192,12 @@ function themeLightDark() {
     }
   }
 }
+//
+if (localStorage.getItem("theme") === "dark") {
+  document.body.classList.add("t-dark");
+  const checkbox = document.getElementById("dark-mode");
+  checkbox.checked = true;
+}
 themeLightDark();
 /**
  * theme glass effect
@@ -223,8 +229,3 @@ function themeGlassEffect() {
   }
 }
 themeGlassEffect();
-
-//
-if (localStorage.getItem("theme") === "dark") {
-  document.body.classList.add("t-dark");
-}

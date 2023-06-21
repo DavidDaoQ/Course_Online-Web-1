@@ -1,0 +1,83 @@
+/* Color root */
+:root {
+  --pink: #ff046f;
+  --violet: #c63bfa;
+}
+/* all */
+
+.heading {
+  font-size: 3rem;
+  color: var(--main-color);
+  text-align: center;
+  padding: 0 1rem;
+  padding-top: 6rem;
+  letter-spacing: 0.2rem;
+  font-weight: 500;
+}
+.title {
+  padding: 0 1rem;
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: 400;
+  color: var(--black-70);
+}
+/* teacher */
+.teacher .card-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 2rem 0;
+}
+.teacher .card-container .card {
+  padding: 2rem;
+  margin: 2rem;
+  background: #fff;
+  text-align: center;
+  width: 15rem;
+  border-radius: 5px;
+  box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.3);
+}
+.teacher .card-container .card img {
+  height: 15rem;
+  width: 100%;
+  object-fit: cover;
+  filter: grayscale();
+  transition: 0.2s;
+}
+.teacher .card-container .card:hover img {
+  filter: grayscale(0);
+}
+.teacher .card-container .card h3 {
+  color: var(--pink);
+  font-size: 1.6rem;
+  padding: 0.5rem 0;
+}
+.teacher .card-container .card p {
+  font-size: 1.2rem;
+  color: #666;
+}
+.teacher .card-container .card .icons a {
+  font-size: 1.5rem;
+  padding: 1.5rem 0.5rem;
+  color: var(--pink);
+}
+.teacher .card-container .card .icons a:hover {
+  color: var(--violet);
+}
+
+/* media queries */
+@media (max-width: 768px) {
+  .heading {
+    font-size: 2rem;
+  }
+  .title {
+    font-size: 1.5rem;
+  }
+  .teacher .card-container .card {
+    width: 450px;
+  }
+  .teacher .card-container .card img {
+    height: 20rem;
+  }
+}
