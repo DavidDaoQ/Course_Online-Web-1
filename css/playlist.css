@@ -1,59 +1,138 @@
-.container-1 {
-  max-width: 1200px;
-  margin: 10px auto;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  gap: 20px;
-}
-.container-1 .main-video-container {
-  flex: 1 1 700px;
-  border-radius: 5px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  background-color: var(--white);
-  padding: 15px;
+/*
+🎬 Video playlist UI Design like Skillshare With Vanilla JavaScript
+👨🏻‍⚕️ By: Coding Design
+
+You can do whatever you want with the code. However if you love my content, you can subscribed my YouTube Channel
+🌎link: www.youtube.com/codingdesign
+*/
+
+:root {
+  --primary: linear-gradient(to bottom right, #0a0057, #3f00ee);
+  --secondary: gold;
+  --text: #fff;
 }
 
-.container-1 .main-video-container .main-video {
-  width: 100%;
-  height: 410px;
-  margin-bottom: 7px;
-  border-radius: 5px;
-}
-.container-1 .main-video-container .main-vid-title {
-  font-size: 20px;
-  color: var(--black-90);
-}
-.container-1 .video-list-container {
-  flex: 1 1 350px;
-  height: 485px;
-  overflow-y: scroll;
-  border-radius: 5px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  background-color: #fff;
-  padding: 15px;
-}
-.container-1 .video-list-container::-webkit-scrollbar {
-  width: 10px;
-}
-.container-1 .video-list-container::-webkit-scrollbar-track {
-  background-color: var(--white);
-  border-radius: 5px;
-}
-.container-1 .video-list-container::-webkit-scrollbar-thumb {
-  background-color: var(--bs-gray);
-  border-radius: 5px;
-}
-.container-1 .video-list-container .list {
+body {
+  background-image: var(--main-color);
+
+  color: var(--black-70);
+
   display: flex;
   align-items: center;
-  gap: 15px;
-  padding: 10px;
-  background-color: #eee;
-  cursor: pointer;
-  border-radius: 5px;
-  margin-bottom: 10px;
 }
-.container-1 .video-list-container .list .list-video {
-  width: 100px;
+
+.container-1 {
+  width: 100vw;
+
+  display: grid;
+  grid-template-columns: 1.8fr 1.2fr;
+  gap: 1rem;
+
+  padding: 0.5rem 1rem;
+  text-transform: capitalize;
+}
+
+@media screen and (max-width: 990px) {
+  .container-1 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.main-video,
+.video-playlist {
+  width: 100%;
+  height: 35rem;
+}
+
+.main-video .title-1 {
+  margin-top: 1rem;
+}
+
+.video-playlist .title-1 {
+  padding-left: 1rem;
+}
+
+.video-playlist > p {
+  padding: 1rem;
+  color: var(--secondary);
+}
+
+.video-playlist .videos {
+  height: 70%;
+  overflow-y: auto;
+}
+
+.video-playlist .videos::-webkit-scrollbar {
+  width: 0.4rem;
+  border-radius: 0.4rem;
+  background-color: var(--black-70);
+}
+
+.video-playlist .videos::-webkit-scrollbar-thumb {
+  border-radius: 0.4rem;
+  background-color: var(--white);
+}
+
+.video-playlist .videos .video {
+  position: relative;
+  width: 100%;
+  height: 4rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0 1rem;
+  margin-top: 0.1rem;
+  cursor: pointer;
+
+  border-radius: 0.5rem;
+}
+
+.video-playlist .videos .video:hover {
+  background-color: var(--black-70);
+}
+
+.video-playlist .videos .video.active {
+  background-color: var(--black-70);
+  color: var(--white);
+}
+
+.main-video video {
+  width: 100%;
+  border-radius: 0.5rem;
+  height: 500px;
+}
+
+.video img {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 1.5rem;
+  height: 1.5rem;
+
+  filter: invert(100%);
+}
+
+.video-playlist .videos .video.active img {
+  filter: invert(100%) sepia(100%) saturate(2000%) hue-rotate(360deg);
+}
+
+.video p {
+  margin-left: 2.5rem;
+}
+
+.video h3 {
+  width: 23rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  font: 100 1rem sans-serif;
+  padding: 0 0.5rem;
+}
+.video h3.active {
+  color: var(--white);
 }

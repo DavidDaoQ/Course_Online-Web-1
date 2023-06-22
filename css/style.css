@@ -1096,6 +1096,7 @@ textarea.form-control {
 .course-curriculum ul li {
   position: relative;
   padding: 0 50px 0 20px;
+  color: var(--black-90);
 }
 .course-curriculum ul li:not(:last-child) {
   margin-bottom: 10px;

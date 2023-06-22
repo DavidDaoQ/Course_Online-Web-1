@@ -6,7 +6,8 @@
 /* all */
 
 .heading {
-  font-size: 2rem;
+  font-size: 20px;
+  text-transform: capitalize;
   color: var(--main-color);
   text-align: center;
   padding: 0 1rem;
@@ -16,9 +17,9 @@
 }
 .title-1 {
   padding: 0 1rem;
-  font-size: 1.5rem;
+  font-size: 35px;
   text-align: center;
-  font-weight: 400;
+  font-weight: 600;
   color: var(--black-70);
 }
 /* teacher */
