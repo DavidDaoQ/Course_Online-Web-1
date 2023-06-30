@@ -78,6 +78,7 @@ h3 {
   margin: 0 30px;
 }
 .review .box-container .box {
+  display: inline-block;
   width: 36rem;
   padding-bottom: 1rem;
   text-align: center;
@@ -130,6 +131,52 @@ h3 {
   }
 }
 
+@media (max-width: 828px) {
+  .review .box-container {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .review .box-container .box {
+    width: 18rem;
+    height: 20rem;
+  }
+}
+@media (max-width: 764px) {
+  .review .box-container {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .review .box-container .box {
+    width: 16rem;
+    height: 20rem;
+  }
+}
+@media (max-width: 700px) {
+  .review .box-container {
+    margin: 0 auto;
+  }
+  .review .box-container .box {
+    width: 16rem;
+    height: 20rem;
+  }
+}
+
+@media (max-width: 639px) {
+  .review .box-container {
+    margin: 0 auto;
+    display: inline-block;
+    text-align: center;
+  }
+  .review .box-container .box {
+    width: 16rem;
+    height: 20rem;
+    display: block;
+    text-align: center;
+    position: relative;
+    left: 70px;
+  }
+}
+
 @media (max-width: 575px) {
   .review .box-container .box {
     width: 30rem;
@@ -144,6 +191,11 @@ h3 {
 @media (max-width: 325px) {
   .review .box-container .box {
     height: 24rem;
+  }
+}
+@media (max-width: 291px) {
+  .review .box-container .box {
+    height: 26rem;
   }
 }
 @media (max-width: 230px) {
