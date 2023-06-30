@@ -110,6 +110,7 @@ h3 {
   padding: 1.3rem 0.1rem;
 }
 
+/**Responsive*/
 @media (max-width: 1199px) {
   .review .box-container .box {
     height: 430px;
@@ -163,23 +164,19 @@ h3 {
 
 @media (max-width: 639px) {
   .review .box-container {
-    margin: 0 auto;
-    display: inline-block;
     text-align: center;
   }
   .review .box-container .box {
-    width: 16rem;
+    width: 18rem;
     height: 20rem;
     display: block;
     text-align: center;
-    position: relative;
-    left: 70px;
   }
 }
 
 @media (max-width: 575px) {
   .review .box-container .box {
-    width: 30rem;
+    width: 20rem;
     height: 18rem;
   }
   .sub-title {
