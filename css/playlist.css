@@ -1,161 +1,197 @@
-:root {
-  --primary: linear-gradient(to bottom right, #0a0057, #3f00ee);
-  --secondary: gold;
-  --text: #fff;
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-
-section.section-playlist {
-  background-image: var(--main-color);
-
-  color: var(--black-70);
-
-  display: flex;
-  align-items: center;
+body::-webkit-scrollbar
+{
+   width: 10px;
 }
-
-.container-1 {
-  width: 100vw;
-
-  display: grid;
-  grid-template-columns: 1.8fr 1.2fr;
-  gap: 1rem;
-
-  padding: 0.5rem 1rem;
-  text-transform: capitalize;
+body::-webkit-scrollbar-thumb
+{
+   height: 80px;
+   background: #375666;
+   border: 8px solid transparent;
+   border-radius: 12px;
 }
-
-@media screen and (max-width: 990px) {
-  .container-1 {
-    grid-template-columns: 1fr;
-  }
+body::-webkit-scrollbar-thumb:active
+{
+    background: #003349;
 }
-
-.main-video,
-.video-playlist {
-  width: 100%;
-  height: 35rem;
+body
+{
+    font-family: sans-serif;
+    background: #002333;
 }
-
-.main-video .title-1 {
-  margin-top: 1rem;
+li
+{
+    list-style: none;
 }
-
-.video-playlist .title-1 {
-  padding-left: 1rem;
-}
-
-.video-playlist > p {
-  padding: 1rem;
-  color: var(--secondary);
-}
-
-.video-playlist .videos {
-  height: 70%;
-  overflow-y: auto;
-}
-
-.video-playlist .videos::-webkit-scrollbar {
-  width: 0.4rem;
-  border-radius: 0.4rem;
-  background-color: var(--black-70);
-}
-
-.video-playlist .videos::-webkit-scrollbar-thumb {
-  border-radius: 0.4rem;
-  background-color: var(--white);
-}
-
-.video-playlist .videos .video {
-  position: relative;
-  width: 100%;
-  height: 4rem;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  padding: 0 1rem;
-  margin-top: 0.1rem;
-  cursor: pointer;
-
-  border-radius: 0.5rem;
-}
-
-.video-playlist .videos .video:hover {
-  background-color: var(--black-70);
-}
-
-.video-playlist .videos .video.active {
-  background-color: var(--black-70);
-  color: var(--white);
-}
-
-.main-video video {
-  width: 100%;
-  border-radius: 0.5rem;
-  height: 500px;
-}
-
-.video img {
-  position: absolute;
-  left: 1rem;
-  top: 50%;
-  transform: translateY(-50%);
-
-  width: 1.5rem;
-  height: 1.5rem;
-
-  filter: invert(100%);
-}
-
-.video-playlist .videos .video.active img {
-  filter: invert(100%) sepia(100%) saturate(2000%) hue-rotate(360deg);
-}
-
-.video p {
-  margin-left: 2.5rem;
-}
-
-.video h3 {
-  width: 23rem;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-
-  font: 100 1rem sans-serif;
-  padding: 0 0.5rem;
-}
-.video h3.active {
-  color: var(--white);
-}
-/*--media--*/
-@media (max-width: 1199px) {
-  .section-playlist {
-    width: 100%;
-  }
-}
-@media (max-width: 991px) {
-  .container-1 {
+section
+{
     display: flex;
-    flex-wrap: wrap;
-  }
-  .main-video video {
-    width: 100%;
-  }
-  .video-playlist {
-    width: 880px;
-  }
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2.5%;
+    min-height: 100vh;
 }
-@media (max-width: 767px) {
-  .main-video video {
+
+.title
+{
+    font-size: 20px;
+    font-weight: 600;
+    color: #dcdee1;
+    text-align: left;
     width: 100%;
-  }
+    margin-bottom: 10px;
 }
-@media (max-width: 575px) {
-  .main-video video {
+.container
+{
+    position: relative;
     width: 100%;
-  }
-  .video-playlist {
-    width: 540px;
-  }
+    height: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    overflow: hidden;
+    /* border: 2px solid red; */
+}
+.container #main-Video
+{
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    outline: none;
+}
+
+#searchInput{
+    width: 100%;
+    padding: 10px;
+    background: transparent;
+    color: #dcdee1;
+    outline: none;
+    border: 2px solid #375666;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.playlistBx
+{
+    position: relative;
+    height: 100%;
+    margin: 0 10px 0 10px;
+    /* border: 2px solid green; */
+}
+.playlist
+{
+    position: absolute;
+    width: 100%;
+    height: calc(100% - 40px);
+    overflow-y: scroll;
+    border-top: 1px solid #dcdee1;
+    padding-bottom: 42px; /* I forget to add this while I was recording this video please add this line if you don't add this property then the last li in the playlist will not show  */
+}
+.playlist::-webkit-scrollbar
+{
+   width: 0px;
+}
+.playlistBx .row .AllLessons
+{
+   display: block;
+   text-align: left;
+   color: #dcdee1;
+   font-size: 15px;
+   font-weight: 700;
+   margin-left: 20px;
+   line-height: 40px;
+}
+.playlist li
+{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   list-style: none;
+   color: #dcdee1;
+   cursor: pointer;
+   border: 1px solid transparent;
+   padding: 15px 20px;
+   border-radius: 5px;
+}
+.playlist li:hover
+{
+    border: 0.5px solid #375666;
+}
+.playlist li .row span
+{
+    font-size: 15px;
+    font-weight: 400;
+    color: #dcdee1;
+    text-decoration: none;
+    display: inline-block;
+    text-align: left;
+}
+.playlist li .row span::before
+{
+    content: '\f01d';
+    font-family: FontAwesome;
+    color: #dcdee1;
+    margin-right: 15px;
+    font-size: 20px;
+}
+ul li.playing .row span::before
+{
+    content: '\f28c';
+    font-family: FontAwesome;
+    color: #fff;
+    margin-right: 15px;
+    font-size: 20px;
+}
+.playlist li.playing .row span
+{
+   color: #fff;
+}
+.playlist li span.duration
+{
+    font-size: 15px;
+    font-weight: 400;
+    display: inline-block;
+    color: #dcdee1;
+    text-align: right;
+}
+.playlist li.playing
+{
+   pointer-events: none;
+   background: #1d3541;
+   border: 0.5px solid #1d3541;
+}
+
+@media(max-width: 1092px){
+    section
+    {
+        padding: 30px 10px;
+    }
+    .container
+    {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        overflow: hidden;
+    }
+    .container #main-Video
+    {
+        height: 100%;
+    }
+    .playlistBx
+    {
+        height: 380px;
+        margin-top: 10px;
+    }
+    .playlist
+    {
+        position: absolute;
+        width: 100%;
+        height: calc(100% - 40px);
+        overflow-y: scroll;
+    }
 }

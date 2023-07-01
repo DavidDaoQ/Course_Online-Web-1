@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Playlist</title>
+    <title>Danh sách phát</title>
     <!--LINK FAVICON-->
     <link
       rel="shortcut icon"
@@ -16,7 +16,7 @@
       rel="stylesheet"
     />
     <!--LINK CSS-->
-    <link rel="stylesheet" href="./css/style.css" />
+
     <link
       rel="stylesheet"
       class="js-color-style"
@@ -47,296 +47,60 @@
     </div>
     <!-- page loader end -->
 
-    <!--main wrapper start-->
-    <div class="main-wrapper">
-      <!--header start-->
-      <header class="header">
-        <div class="container">
-          <div
-            class="header-main d-flex justify-content-between align-items-center"
-          >
-            <div class="header-logo">
-              <a href="index.html"><span>DQS</span>tudy</a>
-            </div>
-            <button
-              type="button"
-              class="header-hamburger-btn js-header-menu-toggler"
-            >
-              <span></span>
-            </button>
-            <div class="header-backdrop js-header-backdrop"></div>
-            <nav class="header-menu js-header-menu">
-              <button
-                type="button"
-                class="header-close-btn js-header-menu-toggler"
-              >
-                <i class="fas fa-times"></i>
-              </button>
-              <ul class="menu">
-                <li class="menu-item">
-                  <a href="index.html">Trang chủ</a>
-                </li>
-                <li class="menu-item menu-item-has-children">
-                  <a href="# " class="js-toggle-sub-menu"
-                    >Khóa học <i class="fas fa-chevron-down"></i
-                  ></a>
-                  <ul class="sub-menu js-sub-menu">
-                    <li class="sub-menu-item">
-                      <a href="courses.html">Các khóa học</a>
-                    </li>
-                    <li class="sub-menu-item">
-                      <a href="course-details.html">Chi tiết khóa học</a>
-                    </li>
-                  </ul>
-                </li>
-                <li class="menu-item menu-item-has-children">
-                  <a href="# " class="js-toggle-sub-menu"
-                    >Trang <i class="fas fa-chevron-down"></i
-                  ></a>
-                  <ul class="sub-menu js-sub-menu">
-                    <li class="sub-menu-item">
-                      <a href="teacher.html">Giảng viên</a>
-                    </li>
-                    <li class="sub-menu-item">
-                      <a href="review.html">Reviews</a>
-                    </li>
-                  </ul>
-                </li>
-                <li class="menu-item">
-                  <a href="contact.html ">Liên hệ</a>
-                </li>
-              </ul>
-            </nav>
-          </div>
+    <!-- section playlist start -->
+    <section>
+      <h2 class="title"></h2>
+      <div class="container">
+        <div id="video_player">
+          <video controls id="main-Video" src="./media/"></video>
         </div>
-      </header>
-      <!--HEADER END-->
-
-      <!-- breadcrumb start -->
-      <div class="breadcrumb-nav">
-        <div class="container">
-          <nav style="--bs-breadcrumb-divider: '>'" aria-label="breadcrumb">
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item">
-                <a href="index.html">Trang chủ</a>
-              </li>
-              <li class="breadcrumb-item active" aria-current="page">
-                Danh sách video khóa học
-              </li>
-            </ol>
-          </nav>
-        </div>
-      </div>
-      <!-- breadcrumb end -->
-
-      <!--fun facts section part-->
-
-      <!-- style switcher start -->
-      <div class="style-switcher">
-        <div class="style-switcher-toggler js-style-switcher-toggler">
-          <i class="fas fa-cog"></i>
-        </div>
-        <h3>Style Switcher</h3>
-        <div class="style-switcher-item">
-          <p class="mb-3">Theme Colors</p>
-          <!-- theme colors -->
-          <div class="theme-colors js-theme-colors">
-            <button
-              type="button"
-              data-js-theme-color="color-1"
-              class="js-theme-color-item color-1"
-            ></button>
-            <button
-              type="button"
-              data-js-theme-color="color-2"
-              class="js-theme-color-item color-2"
-            ></button>
-            <button
-              type="button"
-              data-js-theme-color="color-3"
-              class="js-theme-color-item color-3"
-            ></button>
-            <button
-              type="button"
-              data-js-theme-color="color-4"
-              class="js-theme-color-item color-4"
-            ></button>
-            <button
-              type="button"
-              data-js-theme-color="color-5"
-              class="js-theme-color-item color-5"
-            ></button>
-          </div>
-        </div>
-        <div class="style-switcher-item">
-          <div class="form-check form-switch">
-            <input
-              class="form-check-input js-dark-mode"
-              type="checkbox"
-              role="switch"
-              id="dark-mode"
-            />
-            <label class="form-check-label" for="dark-mode">Dark Mode</label>
-          </div>
-        </div>
-        <div class="style-switcher-item">
-          <div class="form-check form-switch">
-            <input
-              class="form-check-input js-glass-effect"
-              type="checkbox"
-              role="switch"
-              id="glass-effect"
-            />
-            <label class="form-check-label" for="glass-effect"
-              >Glass Effect</label
-            >
-          </div>
-        </div>
-      </div>
-      <!-- style switcher end -->
-
-      <!-- video course playlist start -->
-      <section class="section-playlist">
-        <main class="container-1">
-          <div class="main-video">
-            <video src="video/playlist-1.mp4" controls autoplay muted></video>
-            <h3 class="title-1">Title of the playing Video.</h3>
-          </div>
-
-          <div class="video-playlist">
-            <h3 class="title-1">Title of Video Playlist</h3>
-            <p>10 lessions &nbsp; . &nbsp; 50m 48s</p>
-            <div class="videos"></div>
-          </div>
-        </main>
-      </section>
-
-      <!-- video course playlist end -->
-
-      <!-- footer start -->
-      <footer class="footer">
-        <div class="footer-top">
-          <div class="container">
+        <div class="playlistBx">
+          <div class="header">
             <div class="row">
-              <div class="col-sm-6 col-lg-3">
-                <div class="footer-item">
-                  <h3><span>DQS</span>tudy</h3>
-                  <ul>
-                    <li>
-                      <a href="#">Giới thiệu</a>
-                    </li>
-                    <li>
-                      <a href="#">Những gì chúng tôi cung cấp</a>
-                    </li>
-                    <li>
-                      <a href="#">Nghề nghiệp</a>
-                    </li>
-                    <li>
-                      <a href="#">Chứng Chỉ</a>
-                    </li>
-                    <li>
-                      <a href="#">Blog</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="col-sm-6 col-lg-3">
-                <div class="footer-item">
-                  <h3>Học tập</h3>
-                  <ul>
-                    <li>
-                      <a href="#">Tải ứng dụng</a>
-                    </li>
-                    <li>
-                      <a href="#"> Giấy chứng nhận</a>
-                    </li>
-                    <li>
-                      <a href="#"> Định giá</a>
-                    </li>
-                    <li>
-                      <a href="#">Faqs</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="col-sm-6 col-lg-3">
-                <div class="footer-item">
-                  <h3>Thông Tin Khác</h3>
-                  <ul>
-                    <li>
-                      <a href="#">Bên liên quan</a>
-                    </li>
-                    <li>
-                      <a href="#">Trở thành người tạo khóa học</a>
-                    </li>
-                    <li>
-                      <a href="#">Hội thảo trên web về đào tạo</a>
-                    </li>
-                    <li>
-                      <a href="#">Cá tính tự do</a>
-                    </li>
-                    <li>
-                      <a href="#">Giúp đỡ và Hỗ trợ</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="col-sm-6 col-lg-3">
-                <div class="footer-item">
-                  <h3>Liên Lạc</h3>
-                  <ul>
-                    <li>
-                      <a href="#"
-                        ><i class="fab fa-facebook social-icon"></i>Facebook</a
-                      >
-                    </li>
-                    <li>
-                      <a href="#"
-                        ><i class="fab fa-twitter social-icon"></i>Twitter</a
-                      >
-                    </li>
-                    <li>
-                      <a href="#"
-                        ><i class="fab fa-instagram social-icon"></i
-                        >Instagram</a
-                      >
-                    </li>
-                    <li>
-                      <a href="#"
-                        ><i class="fab fa-youtube social-icon"></i>Youtube</a
-                      >
-                    </li>
-                    <li>
-                      <a href="#"
-                        ><i class="fab fa-linkedin social-icon"></i>LinkedIn</a
-                      >
-                    </li>
-                  </ul>
-                </div>
-              </div>
+              <span class="AllLessons"></span>
             </div>
+            <input
+              type="text"
+              name=""
+              id="searchInput"
+              placeholder="Type Something ...."
+            />
           </div>
+          <ul class="playlist" id="playlist"></ul>
         </div>
-        <div class="footer-bottom">
-          <div class="container">
-            <p class="m-0 py-4 text-center">
-              Copyright &copy; 2023 Dao Dang Quang
-            </p>
-          </div>
-        </div>
-      </footer>
-      <!-- footer end -->
-    </div>
-    <!--main wrapper end-->
+      </div>
+    </section>
+    <!-- section playlist end -->
+
+    <!-- link js start -->
+    <script src="./js/video-list.js"></script>
+    <script src="./js/script.js"></script>
+    <script>
+      const searchInput = document.getElementById("searchInput");
+      searchInput.addEventListener("input", function () {
+        const searchValue = searchInput.value.toLowerCase();
+        for (const li of playlist.children) {
+          const span = li.querySelector("span");
+          const spanText = span.textContent;
+          const spanTextLower = spanText.toLowerCase();
+          const startIndex = spanTextLower.indexOf(searchValue);
+          if (startIndex === -1) {
+            li.style.display = "none";
+          } else {
+            li.style.display = "";
+            span.innerHTML =
+              spanText.slice(0, startIndex) +
+              "<mark>" +
+              spanText.slice(startIndex, startIndex + searchValue.length) +
+              "</mark>" +
+              spanText.slice(startIndex + searchValue.length);
+          }
+        }
+      });
+    </script>
+    <!-- link js end -->
 
     <!-- link js boostrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- link js    -->
-    <script src="./js/main.js "></script>
-
-    <script src="./js/script.js"></script>
   </body>
 </html>
