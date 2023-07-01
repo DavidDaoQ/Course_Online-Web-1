@@ -56,7 +56,7 @@ function headerMenu() {
     item.addEventListener("click", toggleMenu);
   });
 
-  // close the menu by clicking outside of it
+  // đóng menu bằng cách nhấp vào bên ngoài nó
   backdrop.addEventListener("click", toggleMenu);
 
   function collapse() {
@@ -71,27 +71,27 @@ function headerMenu() {
       target.classList.contains("js-toggle-sub-menu") &&
       window.innerWidth <= menuCollapseBreakpoint
     ) {
-      // prevent default anchor click behavior
+      // Ngăn hành vi nhấp chuột lâu
       event.preventDefault();
 
-      // if menu-item already expanded,collapse it and exit
+      // nếu mục menu đã được mở rộng, hãy thu gọn nó và thoát
       if (target.parentElement.classList.contains("active")) {
         collapse();
         return;
       }
 
-      // collapse the other expanded menu-item if exists
+      // thu gọn mục menu mở rộng khác nếu tồn tại
       if (menu.querySelector(".active")) {
         collapse();
       }
 
-      // expand new menu-item
+      // mở rộng mục menu mới
       target.parentElement.classList.add("active");
       target.nextElementSibling.style.maxHeight =
         target.nextElementSibling.scrollHeight + "px";
     }
   });
-  // When resizing window
+  // Khi thay đổi kích thước cửa sổ
   window.addEventListener("resize", function () {
     if (
       this.innerWidth > menuCollapseBreakpoint &&
@@ -110,7 +110,7 @@ function headerMenu() {
 headerMenu();
 
 /**
- * Style switcher
+ * Trình chuyển đổi kiểu
  */
 function styleSwitcherToggle() {
   const styleSwitcher = document.querySelector(".style-switcher");
@@ -125,7 +125,7 @@ function styleSwitcherToggle() {
   });
 }
 styleSwitcherToggle();
-// theme colors
+// Màu nền
 
 function themeColors() {
   const colorStyle = document.querySelector(".js-color-style");
@@ -172,7 +172,7 @@ function themeColors() {
 }
 themeColors();
 
-// theme light & dark mode
+// Chế độ sáng và tối
 function themeLightDark() {
   const darkModeCheckbox = document.querySelector(".js-dark-mode");
 
@@ -200,7 +200,7 @@ if (localStorage.getItem("theme") === "dark") {
 }
 themeLightDark();
 /**
- * theme glass effect
+ * Hiệu ứng nền kính
  */
 function themeGlassEffect() {
   const glassEffectCheckbox = document.querySelector(".js-glass-effect");
