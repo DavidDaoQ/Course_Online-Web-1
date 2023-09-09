@@ -138,11 +138,11 @@ function themeColors() {
     }
   });
   function setColor() {
-    let path = colorStyle.getAttribute("href").split("/");
-    path = path.splice(0, path.length - 1);
-    colorStyle.setAttribute(
+    let path = colorStyle.getAttribute("href").split("/");// chia chuỗi thành mảng con
+    path = path.splice(0, path.length - 1);// thay thế mảng cũ bằng mảng mới
+    colorStyle.setAttribute( // Cập nhật màu mới thay màu cũ
       "href",
-      path.join("/") + "/" + localStorage.getItem("color") + ".css"
+      path.join("/") + "/" + localStorage.getItem("color") + ".css" // Nối mảng thành một chuỗi và xuất dữ liệu file css trong localstorage
     );
     if (document.querySelector(".js-theme-color-item.active")) {
       document
